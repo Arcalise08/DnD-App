@@ -1,0 +1,283 @@
+:root {
+    --top-bar-height: 6em
+}
+
+body {
+    background-image: url(../img/paper.jfif);
+    background-size: 300% 500%;
+    background-repeat: no-repeat;
+    font-family: 'Trade Winds', cursive;
+
+}
+
+
+
+.header {
+    padding: 0;
+}
+
+.topbar {
+    background-image: url(../img/barbackground.jpg);
+    
+    /*background-color: rgb(43, 99, 60);*/
+    border-bottom: 1px ridge rgba(0, 0, 0, 0.103);
+}
+
+
+.titleImg {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.firstItem {
+    margin-left: 50px;
+}
+
+.txtsize {
+    font-size: 3.5rem;
+
+}
+
+.txtmargin {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.modal-header .close { 
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem -1rem;
+}
+
+.modal-title {
+    color: rgb(112, 3, 3);
+}
+
+.modal-header {
+    border: none;
+    
+}
+
+.modal-sep {
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to left, #e8e5c8, rgb(221, 2, 2));
+    border-image-slice: 1;
+}
+
+.modal-content {
+    background: url(../img/paper.jpg);
+
+}
+.modal-stats {
+    white-space: pre-wrap;
+
+}
+.bar {
+    height: 8px;
+    width: 102%;
+    background-image: url(https://s3.amazonaws.com/files.d20.io/images/105716694/59KW_4mBR3y_Iz45sQw2-g/med.png);
+    border: 1px solid #2f2112;
+    border-radius: 2px;
+    margin: -5px 0px 0px -4.5px;
+}
+
+.bottom {
+    margin-bottom: -2px;
+}
+.modal-stats {
+
+}
+
+.monstimg {
+    width: 100%;
+    padding: 30px;
+}
+
+.monstimg:after {
+    content: "";
+    display: block;
+    border: 1px solid black;
+}
+
+th {
+    padding: 5px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+td {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    padding: 5px;
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+td:first-child, th:first-child {
+    border-left: none;
+}
+
+
+.gridList {
+    columns: 3;
+    padding: 20px;
+}
+
+.progress {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.loadingWrapper {
+    text-align: center;
+    margin-top: 13rem;
+}
+
+.menuBtns {
+    width: 100%;  
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 0;  
+
+}
+
+.initBtns {
+    width: 100%;  
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-radius: 0;  
+
+}
+
+.menuBtnList {
+    background-color: rgba(0, 0, 0, 0.678);
+    height: 95vh;
+    width: 25vh;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: var(--top-bar-height);
+    z-index: 5;
+    padding: 0;
+}
+
+.menuListItems {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.searchButton {
+    width: 30%;
+    display: block;
+}
+
+.navbtncont {
+    bottom: 0;
+}
+
+.navBtn {
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    border-color: rgba(0, 0, 0, 0.514);
+
+}
+
+.pointer {
+    display: block;
+}
+
+.fancybtn {
+    height: 87px;
+    background-image: url('../img/bg_red1.png');
+    background-size: 100% 100%;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    font-family: 'Acme', sans-serif;    
+    bottom: -20px;
+    left: 0;
+    width:100%;
+
+}
+
+.btnCont {
+    list-style-type: none;
+    margin-top: 5vh;
+    padding: 0;
+}
+
+.navWrapper {
+    height: 13vh;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 3;
+    height: var(--top-bar-height);
+    width: 100%;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.623);
+}
+
+.menuBtns:hover {
+    background-color: blue;
+}
+
+.mainCont {
+}
+
+@media all and (max-width: 200px){
+    .mobileNav {
+        display: none;
+    }
+    footer {
+        position: static !important; 
+    }
+}
+
+@media all and (max-width: 500px) {
+    .txtsize {
+            font-size: 1.5rem;
+        }
+
+    .gridList {
+        columns: 1;
+        width: 100%;
+    }
+
+    .fancybtn {
+        height: 60px;
+    }
+
+    .titleImg {
+        width: 100%;
+    }
+
+    .navbtncont {
+        bottom: .2em;
+    }
+
+    :root {
+        --top-bar-height: 4em
+    }
+    .menuBtnList {
+        top: 4em;
+    }
+
+}   
+@media all and (min-width: 990px){
+    .mobileNav {
+        display: none;
+    }
+}
+@media all and (max-width: 990px) {
+
+}

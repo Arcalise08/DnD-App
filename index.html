@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Acme|Trade+Winds&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>D&D Resource</title>
+</head>
+
+<body>
+
+    <div class='container-fluid navWrapper'>
+        <nav class="navbar navbar-expand-lg navbar-light topbar row"> 
+            <div class='col-1'></div>
+            <a class="navbar-brand col m-0 p-0" href="#">
+                <img class="titleImg" src="img/title.png" alt="Dungeons and Dragons logo">
+            </a>
+            <div class='col-2 col-sm-1 navbtncont'>
+                <button class="navBtn" type="button" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="mainCont container-fluid">
+
+        <div class='row'>
+        <div class='col'>
+
+            <button type="button" class='btn-outline-dark text-center my-1 btn d-none mt-3 mx-auto searchButton' aria-label="searchButton" data-toggle="collapse" data-target="#searchBarToggle">search</button>
+                <div class='collapse' id='searchBarToggle'>
+                    <input class='searchbar form-control' type="text">
+                </div>
+            <div class='landing'>
+                <h2 class='text-center'>Welcome to the Dragonkeep!</h2>
+                <p class='text-center'>This is a resource for finding all you need to know on D&D 5e! <br>
+                                        It still a work in progress so please check often to see the updates! <br>
+                                        follow the development of open 5e on discord. <br> <span><a href="https://discordapp.com/invite/z48BAsD" target="_blank"><img src="img/discord.svg" alt="Discord" width="120"></a></span><br>
+                                        Any issues with using this resource please contact me directly below <br> <span><a href="mailto:demonata08@gmail.com"><img src="img/gmail.svg" alt="gmail" width='40'></a></span>
+                                    </p>
+                <small class='text-center initText d-block mt-3'>click here to get started!</small>
+                <button class='btn d-block startApp mx-auto btn-dark'>Initalize</button>
+
+            </div>
+            <div class='landingComplete d-none'>
+                <img class='pointer' src="img/Arrow.svg" alt="">
+                <div class='alert d-none alert-success'>returned 204210 items</div>
+                <h1 class='display-1 text-center txtsize'>Loading complete!</h1>
+            </div>
+            <div class="progress loadingWrapper d-none">
+                <div class="progress-bar progress-bar-striped bg-info progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0"></div>
+            </div>
+
+            <ul class='monsterGrid gridList d-none'>
+            </ul>
+            <ul class='magicItemGrid gridList d-none'>
+            </ul>
+            <ul class='spellGrid gridList d-none'>
+            </ul>
+            <ul class='classGrid gridList d-none'>
+            </ul>
+            
+        </div>
+        <div class="menuBtnList d-none">
+            <ul class='btnCont'>
+                <li class='menuListItems'>
+                    <button  class="btn initBtns startApp homeBtn">Initalize</button>
+                </li>
+                <li><p class="text-center invisible loadingMenu" style="color: white;">(loading...)</p></li>
+                <li class='menuListItems'>
+                    <button class="btn menuBtns invisible homeBtn">Home</button>
+                </li>
+                <li class='menuListItems'>
+                    <button class="btn menuBtns invisible monstersbtn">Monsters</button>
+                </li>
+
+                <li class='menuListItems'>
+                    <button class="btn menuBtns invisible classesbtn">Classes</button>
+                </li>
+                
+                <li class='menuListItems'>
+                    <button class="btn mx-auto invisible menuBtns spellsbtn">Spells</button>
+                </li>
+                    
+                <li class='menuListItems'>
+                    <button class="btn mx-auto invisible menuBtns magicitemsbtn">Magic Items</button>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+        <div class="modal fade p-0" id="modalDisplay" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class='bar'></div>
+                    <div class="modal-header pb-0">
+                        <h5 class="modal-title" id="ModalCenterTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                    <div class='modal-type pl-3 mb-1 modal-sep'>
+                        <p class='monstertype mb-1'></p>
+                    </div>
+                    <div class='modalimg'>
+                        
+                    </div>
+                    <div class="modal-stats modal-sep">
+                </div>
+                <div class="modal-basestats modal-sep d-none">
+                    <table class='ml-1'>
+                        <tr>
+                            <th class='text-center'>STR</th>
+                            <th class='text-center'>DEX</th>
+                            <th class='text-center'>CON</th>
+                            <th class='text-center'>INT</th>
+                            <th class='text-center'>WIS</th>
+                            <th class='text-center'>CHA</th>
+                        </tr>
+                        <tr class='text-center statdata'>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class='modal-monstmain d-none pl-2 modal-sep'>
+                    <div class='modal-monsterinfo modal-sep'></div>
+                    <div class='modal-abilities modal-sep'></div>
+                    <div class='modal-actions'><h1>Actions</h1></div>
+                </div>
+                
+
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                    <div class='bar bottom'></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <footer class='container-fluid foot'>
+        <small>like this? <br></small>
+        <small>You can find my stuff here!</small>
+        <div class="social-media">
+            <form action="https://twitter.com/Arcalise08" target="_blank" style='display: inline;'>
+                <input type="image" height="50" width="50" src="img/twitter.svg" alt="My Twitter" >
+            </form>
+            <form action="https://github.com/Arcalise08" target="_blank" style="display: inline;">
+                <input type="image" height="50" width="50" src="img/github.svg" alt="My Github" >
+            </form>
+    <!-- Update with linkedin info when profile is made -->
+            <input type="image" height="50" width="50" data-toggle="collapse" data-target="#linkedin" src="img/linkedin.svg" alt="My Linkedin"> 
+        
+        <p class='collapse' id='linkedin' style="color: firebrick" >
+            Linkedin is coming soon.
+        </p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/promise-polyfill.min.js"></script>
+    <script src="js/fetch.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+
+<!--        <h1 class='text-center display-3 txtsize txtmargin landing'>Welcome to the dragonkeep. Click below to get started....</h1>
+        <div class='col'>
+            <button id='startApp' class='btn col-4 btn-outline-light mx-auto d-block'>Initalize</button>
+        </div>-->
