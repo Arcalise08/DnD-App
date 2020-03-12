@@ -234,7 +234,7 @@ footer {
 .mainCont {
 }
 
-@media all and (max-width: 200px){
+@media all and (max-width: 300px){
     .mobileNav {
         display: none;
     }
