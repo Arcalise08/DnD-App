@@ -75,11 +75,12 @@ var master = (function() {
                         $('.landingComplete').removeClass('d-none')
                         $('.alert').removeClass('d-none')
                         $('.pointer').removeClass('d-none')
+                        $('.alert').text('loaded ' + loadeditems() + ' items successfully')
                         animateCSS('.alert', 'fadeInDown', function() {
                             setTimeout(function(){
                                 animateCSS('.alert', 'fadeOutUp', function() {
                                     $('.alert').addClass('d-none')
-                                    pointingLoad()
+                                    
                                 })
                             }, 2000);
                         })
@@ -93,8 +94,10 @@ var master = (function() {
             }
     }   
 
-    function pointingLoad() {
-        
+    function loadeditems() {
+        var loadedcount = allData[0].length + allData[1].length + allData[2].length + allData[3].length
+
+        return loadedcount
     }
 
 
