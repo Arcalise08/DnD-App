@@ -303,6 +303,7 @@ var master = (function() {
                     dexterity: value.dexterity,
                     constitution: value.constitution,
                     intelligence: value.intelligence,
+                    legend: value.legendary_actions,
                     wisdom: value.wisdom,
                     charisma: value.charisma,
                     strsave: value.strength_save,
@@ -432,7 +433,7 @@ var master = (function() {
             info.innerHTML = savingThrowCalc(item) + damageCalc(item) + '<u>Senses:</u> ' + item.senses + '<br>' + languages(item.languages) + '<br>' + '<u>Challenge:</u> ' + item.challenge + challengeRatingCalc(item.challenge)
             specAbilities(item.specabil)
             actions(item.actions)
-            legendactions(item.legend)
+            //legendactions(item.legend)
         }
     
         if (listType === "classes/") {
