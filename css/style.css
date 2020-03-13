@@ -190,7 +190,11 @@ td:first-child, th:first-child {
 }
 
 .pointer {
-    display: block;
+    display: inline-block;
+    position: absolute;
+    bottom: -6em;
+    left: .3em;
+    width: 75px;
 }
 
 .fancybtn {

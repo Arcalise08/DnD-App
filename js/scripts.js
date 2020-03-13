@@ -74,6 +74,7 @@ var master = (function() {
                         $('.loadingMenu').addClass('invisible')
                         $('.landingComplete').removeClass('d-none')
                         $('.alert').removeClass('d-none')
+                        $('.pointer').removeClass('d-none')
                         animateCSS('.alert', 'fadeInDown', function() {
                             setTimeout(function(){
                                 animateCSS('.alert', 'fadeOutUp', function() {
@@ -114,6 +115,7 @@ var master = (function() {
             $('.searchbar').removeClass('spel')
             $('.searchbar').removeClass('clas')
             $('.searchbar').removeClass('mgcit') 
+            $('.pointer').addClass('d-none')
             $('.landingComplete').addClass('d-none')
             $('.searchButton').removeClass('d-none') 
             $("footer").css('position', 'static')
